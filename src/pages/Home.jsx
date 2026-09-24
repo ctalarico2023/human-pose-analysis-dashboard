@@ -31,10 +31,10 @@ function Home({ onOpenDashboard }) {
           </p>
         </article>
         <article className="feature-card">
-          <h2>Account-ready layout</h2>
+          <h2>Signed-in dashboard</h2>
           <p>
-            Authentication and cloud storage are not included yet. The current
-            screens are a public prototype of the interface.
+            The home page stays public. Opening the dashboard requires an
+            account so saved records can later be tied to the signed-in user.
           </p>
         </article>
       </div>

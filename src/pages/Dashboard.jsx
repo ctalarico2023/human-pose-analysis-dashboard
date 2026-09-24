@@ -1,11 +1,15 @@
 import { sampleRecords } from '../data/sampleRecords.js'
+import { useAuth } from '../context/AuthProvider.jsx'
 
 function Dashboard() {
+  const { user } = useAuth()
+
   return (
     <section className="page dashboard-page">
       <div className="page-heading">
         <div>
           <h1>Pose analysis records</h1>
+          <p className="signed-in-as">Signed in as {user?.email}</p>
           <p className="lede">
             Sample records are shown below so the layout is visible. View, edit,
             add, and delete actions are placeholders and do not save changes

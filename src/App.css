@@ -17,6 +17,12 @@
   gap: 16px;
 }
 
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .brand {
   font-weight: 650;
   color: var(--accent);
@@ -59,6 +65,79 @@ main {
   color: var(--muted);
   max-width: 62ch;
   margin-top: 10px;
+}
+
+.signed-in-as {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.auth-panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 440px;
+}
+
+.auth-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.form-field {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-field input {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text);
+  background: #fff;
+}
+
+.form-field input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.form-error {
+  color: var(--danger);
+  font-size: 14px;
+}
+
+.form-info {
+  color: var(--complete-text);
+  font-size: 14px;
+}
+
+.auth-switch {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.text-link {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--accent);
+  font-size: inherit;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.text-link:hover {
+  color: var(--accent-hover);
 }
 
 .eyebrow {
@@ -223,6 +302,7 @@ main {
 
 @media (max-width: 800px) {
   .header-inner,
+  .header-controls,
   .page-heading,
   .record-card {
     flex-direction: column;
