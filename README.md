@@ -104,7 +104,7 @@ Replace the placeholders with the URL and publishable key from your Supabase pro
 
 The application is intended to be deployed using Netlify. The same two environment variables, `VITE_SUPABASE_URL` and `VITE_SUPABASE_PUBLISHABLE_KEY`, need to be set in the Netlify site settings before a production build.
 
-[Deployed application link will be added here]
+[https://human-pose-analysis-dashboard.netlify.app/](https://human-pose-analysis-dashboard.netlify.app/)
 
 ## Project structure
 
