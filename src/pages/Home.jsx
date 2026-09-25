@@ -26,8 +26,8 @@ function Home({ onOpenDashboard }) {
         <article className="feature-card">
           <h2>Simple review</h2>
           <p>
-            View, edit, add, and delete controls are laid out on the dashboard
-            so those actions can be connected to a database later.
+            View, edit, add, and delete controls on the dashboard save those
+            changes for the signed-in account.
           </p>
         </article>
         <article className="feature-card">

@@ -95,7 +95,9 @@ main {
   font-weight: 600;
 }
 
-.form-field input {
+.form-field input,
+.form-field select,
+.form-field textarea {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 10px 12px;
@@ -103,9 +105,16 @@ main {
   font-weight: 400;
   color: var(--text);
   background: #fff;
+  width: 100%;
 }
 
-.form-field input:focus {
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
   outline: 2px solid var(--accent);
   outline-offset: 1px;
 }
@@ -203,6 +212,103 @@ main {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+}
+
+.record-card.selected {
+  border-color: var(--accent);
+}
+
+.editor-panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  display: grid;
+  gap: 16px;
+}
+
+.editor-grid,
+.detail-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.editor-grid .full,
+.detail-list .full {
+  grid-column: 1 / -1;
+}
+
+.detail-list {
+  margin: 0;
+}
+
+.detail-list div {
+  margin: 0;
+}
+
+.detail-list dt,
+.detail-label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.detail-list dd {
+  margin: 0;
+  font-weight: 600;
+  white-space: pre-wrap;
+}
+
+.detail-label {
+  font-weight: 650;
+}
+
+.field-hint,
+.status-message {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.banner-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #fdf2f2;
+  color: var(--danger);
+  border: 1px solid #e4b4b4;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+}
+
+.keypoints-block {
+  margin: 0;
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 12px;
+  overflow: auto;
+  font-size: 13px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
+.confirm-text {
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--danger);
+}
+
+.btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
 }
 
 .record-title-row {
@@ -309,9 +415,16 @@ main {
   }
 
   .feature-grid,
-  .record-meta {
+  .record-meta,
+  .editor-grid,
+  .detail-list {
     grid-template-columns: 1fr;
     display: grid;
+  }
+
+  .banner-error {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .record-actions {
