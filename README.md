@@ -118,3 +118,10 @@ src/
   App.jsx         View routing and protected dashboard access
   main.jsx        Application entry point
 ```
+
+## Demo Video
+
+[Watch the 3-5 minute demo on YouTube](https://youtu.be/A4Z4mOxO0sQ)
+
+
+
